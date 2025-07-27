@@ -93,22 +93,20 @@ function App() {
 
   return (
     <div className="dark:bg-zinc-900 bg-white min-h-screen text-zinc-800 dark:text-zinc-300">
-      <div className="grid grid-cols-5 h-screen text-center">
+      <div className="grid grid-cols-1 md:grid-cols-5 h-screen text-center">
         <RecentSearch
           recentHistory={recentHistory}
           setRecentHistory={setRecentHistory}
           setSelectedHistory={setSelectedHistory}
         />
 
-        <div className="col-span-4 p-10 overflow-hidden">
-          <h1 className="font-bold text-5xl bg-clip-text text-transparent bg-gradient-to-r from-pink-700 to-violet-700 mb-3">
+        <div className="col-span-1 md:col-span-4 p-4 md:p-10 overflow-hidden">
+          <h1 className="text-3xl sm:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-pink-700 to-violet-700 mb-3">
             Intellichat Ai
           </h1>
-          <h1 className="text-4xl pb-2 font-semibold bg-clip-text text-transparent bg-gradient-to-r from-pink-700 to-violet-700">
+          <h1 className="text-xl sm:text-4xl pb-2 font-semibold bg-clip-text text-transparent bg-gradient-to-r from-pink-700 to-violet-700">
             Hello {username || "User"}, Ask me Anything
           </h1>
-
-          {/* ... loader block ... */}
 
           <div
             ref={scrollToAns}
@@ -121,8 +119,7 @@ function App() {
             </ul>
           </div>
 
-          {/* ✅ Fixed input container below */}
-          <div className="dark:bg-zinc-800 bg-zinc-100 w-1/2 p-1 pr-5 text-zinc-800 dark:text-white m-auto rounded-4xl border border-zinc-400 dark:border-zinc-700 flex h-16 rounded-full">
+          <div className="dark:bg-zinc-800 bg-zinc-100 w-full sm:w-3/4 md:w-1/2 p-1 pr-3 m-auto border border-zinc-400 dark:border-zinc-700 flex h-14 sm:h-16 rounded-full">
             <input
               type="text"
               value={question}

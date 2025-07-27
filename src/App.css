@@ -1,8 +1,7 @@
+/* Hide scrollbar for custom scroll container */
 .hide-scrollbar::-webkit-scrollbar {
-  width: 0px;
-  background: transparent;
+  display: none;
 }
-
 .hide-scrollbar {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
